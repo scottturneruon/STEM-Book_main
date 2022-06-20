@@ -1,4 +1,4 @@
-\chapter{Planet Canterbury Christ Church}
+\chapter{Planet Canterbury \newline Christ Church}
 \section{Setting up}
 Using Mozzila's brilliant AFrame, a web-based Virtual Reality model of a planet with rings and include a moon with an image on it.
 The first step is to set a new site in trinket (or use the old one)  and then add a white sphere on a black background.
@@ -67,7 +67,9 @@ loop: true; dur: 10000">
 \end{lstlisting}
 
 \section{Planets need Rings}
-In Aframe if you nest another object with the <></> of another object it's position is set relative to the first object. This principle is going to be used here put a ring around the planet. The first stage is to add the ring object is used for this and a the same rotating animation is used. We are going to use a squashed doughnut shape <a-torus> to do this. When the webpage is running you will probably need use the down arrow key to zoom out to see the ring.
+In Aframe if you nest another object with the 
+\begin{lstlisting}<><\>\end{lstlisting} of another object it's position is set relative to the first object. This principle is going to be used here put a ring around the planet. The first stage is to add the ring object is used for this and a the same rotating animation is used. We are going to use a squashed doughnut shape
+\begin{lstlisting}<a-torus>\end{lstlisting} to do this. When the webpage is running you will probably need use the down arrow key to zoom out to see the ring.
 
 \begin{lstlisting}
 <html>
@@ -113,7 +115,14 @@ The process is really just combining elements of the steps 1-3. Create a new sph
 
 If the images are accessible as web sources this could be a great option.
 
-Lets put a moon on the ring (ie. within the <a-torus> and </a-torus> tags).
+Lets put a moon on the ring between
+\begin{lstlisting}
+<a-torus>
+\end{lstlisting} 
+\begin{lstlisting}
+</a-torus>
+\end{lstlisting} 
+
 
 So the code for the moon
 \begin{lstlisting}
@@ -164,9 +173,14 @@ Gets put inside that of the torus, so the whole thing becomes
 \end{lstlisting}
 
 \section{Let's add text and stars}
-So we might want to put some text into the world we can do that with <a-text value=””> So adding this to the code (see below) put a message on the screen, though you may have to use the down arrow to see it.
-
+So we might want to put some text into the world we can do that with
 \begin{lstlisting}
+<a-text value=””>
+\end{lstlisting} 
+
+So adding this to the code (see below) put a message on the screen, though you may have to use the down arrow to see it.
+
+\begin{lstlisting} 
 <html>
   <head>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js">
@@ -213,7 +227,16 @@ So we might want to put some text into the world we can do that with <a-text val
     \label{fig:Planet again}
 \end{figure}
 
-We can get interesting effects if we add the text between  </a-sphere> and </a-torus> Try adding this in there. <a-text value="Planet CCCU Computing" position="0 3 -2"></a-text>
+We can get interesting effects if we add the text between \begin{lstlisting}
+</a-sphere>
+\end{lstlisting}
+\begin{lstlisting}
+</a-torus>
+\end{lstlisting}  
+
+Try adding this in there. \begin{lstlisting}
+<a-text value="Planet CCCU Computing" position="0 3 -2"></a-text>
+\end{lstlisting}
 
 Have a play with altering the text and putting the line elsewhere in the code. What happens?
 
@@ -227,7 +250,11 @@ So change the sky line in the code to white we are going to use the space image 
 80d4-b6c9a98ba43d.jfif?v=1614341330757">
 </a-sky>
 \end{lstlisting}
-Now adding it the code in place of the current <a-sky> line we 
+Now adding it the code in place of the current 
+\begin{lstlisting}
+<a-sky>\end{lstlisting}
+
+We get.
 \begin{lstlisting}
 <html>
   <head>
