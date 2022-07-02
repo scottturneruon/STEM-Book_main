@@ -8,6 +8,74 @@ Chapter 3 is about linking these computational thinking ideas to produce visual 
 
 The other chapters make links with areas such as Robots, Musicians, Explorers, Magicians, Gamers, Cooks and Scientists.
 
+\sectionn{Tools we can use}
+
+A sequence of instructions
+\begin{lstlisting}
+Find the lid of a bottle
+Turn lid of the bottle until lid comes off
+\end{lstlisting}
+
+A loop to repeat a sequence until something we define happens or even for ever. So our instruction "Turn lid of the bottle until lid comes off" might be changed to get a certain sequence of instructions to be repeated. I am going use indenting to show what is in the loop (bit that repeats).
+\begin{lstlisting}
+hold the bottle
+Repeat until lid comes off
+   turn the lid 45 degrees anti-clockwise
+   release lid hand 
+   move lid back starting position
+   check does the lid come off
+\end{lstlisting}
+
+Our last tool is a test (conditional statement) where we can what happens based on what the outcome of the test is, Again I i am going to use indenting to show what belong togther. In the previous 'code' we had a line saying "check does the lid come off" which was two outcome if does or it doesn't,
+
+\begin{lstlisting}
+if check does the lid come off == yes
+   pull the lid vertical 10 cm
+   stop the algorithm
+\end{lstlisting}
+
+So lets put all of these together
+\begin{lstlisting}
+Find the lid of a bottle
+hold the bottle
+Repeat until lid comes off
+   turn the lid 45 degrees anti-clockwise
+   release lid hand 
+   move lid back starting position
+   if check does the lid come off == yes
+     pull the lid vertical 10 cm
+     stop the algorithm
+\end{lstlisting}
+
+So know we have a starting point for a routine/algorithm for opening a bottle. 
+
+\section{Make your own game}
+This activity is about computing ideas to build a paper-based game, to create pictures by creating and then following routines (Algorithms) We are going to use the three tools to make the games. 
+
+Goal 1: At the end of the session you have produce a paper-based games instructions that use dice, pens and paper to produce random drawings (see below). The instructions should look a bit like the bottle opening routine 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{chapters/chapterCT1/figures/tt1.JPG}
+    \caption{Thomas' Tangles}
+    \label{fig:ThomasTangles1}
+\end{figure}
+
+Goal 2: You have tested some one else's games and constructively feedback 
+
+You have two dice, some pens and paper.
+
+First 20 minutes
+Working in groups of 2-3 people
+Develop your games and produce the instructions
+
+Remaining 
+Swap your game with another group and each try their game.
+Pass back constructive feedback to the other group.
+
+Don't panic: In case of emergency in the next section there is an example, please build your own.
+
+
 \section{Thomas Tangles}
 This simplifies the algorithm Thomas' Tangles (named after my son who helped develop it) in Chapter 3 of the book discussed in http://compuationalthinking.blogspot.co.uk/2016/11/how-to-be-unplugged-artist.html
 
