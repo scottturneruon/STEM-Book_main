@@ -1,27 +1,33 @@
 
 \chapter{Thomas's Tangles}
-A recently released book Teaching Computing Unplugged in Primary Schools  edited by Helen Caldwell (University of Northampton) and Neil Smith (Open University) has a number of interesting chapters by authors who are passionate about how computing is taught in schools. The central theme is unplugged activities, without using computers, but still teach the fundamental of computational thinking.
 
-Computing, and Computational Thinking in general,  is not just about programming and using a computer (though using computers and  programming are vitally important to Computing) but it is also about many other things including problem-solving, being creative and working collaboratively.
 
-This chapter (and activities) is about linking these computational thinking ideas to produce visual art, by applying computing principles. 
+Computing, and Computational Thinking in general,  is not just about programming and using a computer (though using computers and  programming are vitally important to Computing); but it is also about many other things including problem-solving, being creative and working collaboratively.
 
-Did you know that some artists such Sol Le Witt \url{https://en.wikipedia.org/wiki/Sol_LeWitt} did not physically produce all the work credited to them, but in some cases the actual physical work was made by others following his exact written instructions - in other words an algorithm. This meant that the work can be shown in a number of places at the same time.
+This chapter (and activity) are about linking these computational thinking ideas to produce visual art, by applying computing principles. 
+
+Did you know that some artists such Sol Le Witt \url{https://en.wikipedia.org/wiki/Sol_LeWitt} did not physically produce all the work credited to themselves. In some cases the actual physical work was made by others following the artist's exact written instructions - in other words an algorithm. This meant that the work can be shown in a number of places at the same time.
 
 \section{Tools we can use}
 
-In this activity we are are going to write out a set of clear instructions(we hope) that mean another person can follow them and carry out actions exactly (that is a challenge) as we planned. Our \textbf{three tools} are going to be sequences, repetition/loops and tests.
+In this activity we are are going to write out a set of clear instructions(we hope) that mean another person can follow them and carry out actions exactly (that is a challenge) as we planned. Our \textbf{three tools} are going to be 
+\begin{itemize}
+    \item sequences
+    \item repetition/loops
+    \item tests
+\end{itemize}
 
-Before we start a few things to remember, that I find useful when doing these things:
+
+Before we start a few things to remember, that I find useful when doing these types of activities:
 \begin{itemize}
     \item Computers are not intelligent; we have to tell it literally what to do.
     \item You're the boss, you tell the machine what to do not the other way around.
-    \item You are not writing the instructions for you do to the activity but for someone else. They must be able to do follow these without coming back to you and asking "What did you mean here"
-    \item There is not one answer to these activity, your solution and another groups can both be right.  
+    \item You are not writing the instructions for you do to the activity but for someone else. They must be able to do follow these without coming back to you and asking "What did you mean here?"
+    \item There is not one answer to these activity, your solution and another group's can both be right.  
     \item We need test and find things we have missed - it is not personal.
 \end{itemize}
 
-So let's look at our three tools.
+So let's look at our three tools using an example of opening a bottle.
 
 A sequence of instructions
 \begin{lstlisting}
@@ -29,17 +35,17 @@ Find the lid of a bottle
 Turn lid of the bottle until lid comes off
 \end{lstlisting}
 
-A loop to repeat a sequence until something we define happens or even to continue forever. So our instruction "Turn lid of the bottle until lid comes off" might be changed to get a certain sequence of instructions to be repeated. I am going use indenting to show what is inside the loop (the bit that repeats).
+A loop to repeat a sequence until something we define happens or even to continue forever. So our instruction "Turn lid of the bottle until lid comes off" might be changed to break it down further to produce a certain sequence of instructions to be repeated. I am going use indenting to show what is inside the loop (the bit that repeats).
 \begin{lstlisting}
 hold the bottle
 Repeat until lid comes off
    turn the lid 45 degrees anti-clockwise
    release lid hand 
    move lid back starting position
-   check does the lid come off
+   check does the lid come off?
 \end{lstlisting}
 
-Our last tool is a test (conditional statement) where we can what happens based on what the outcome of the test is, Again I i am going to use indenting to show what belong togther. In the previous 'code' we had a line saying "check does the lid come off" which was two outcome if does or it doesn't,
+Our last tool is a test (conditional statement) where we can change what happens based on the outcome of the test. Again I i am going to use indenting to show what belongs togther. In the previous 'code' we had a line saying "check does the lid come off?" which was two outcome if the lid does come off or it doesn't, This sounds like a test
 
 \begin{lstlisting}
 if check does the lid come off == yes
@@ -63,11 +69,11 @@ Repeat until lid comes off
 So know we have a starting point for a routine/algorithm for opening a bottle. 
 
 \section{Activity - Make your own Art game}
-This activity is about using computing ideas to build a paper-based game. Aim is to create pictures by developing and then following routines (Algorithms) We are going to use the three tools to make the games. 
+This activity is about using computing ideas to build a paper-based game. Aim is to create pictures by developing and then following a set of instructions (Algorithms). We are going to use the three tools to make the games. 
 
-Goal 1: At the end of the session you have produce a paper-based game's instructions that use dice, pens and paper to produce random drawings (see Figure 5.1). The instructions should look a bit like the bottle opening routine 
+Goal 1: At the end of the session you have produce a paper-based game's instructions that use dice, pens and paper to produce random drawings (see Figure 5.1). The instructions will probably look a bit like the bottle opening routine 
 
-Goal 2: You have tested some one else's games and constructively feedback to the developers, ideas, improvements, etc. Testing is an important part of Computing.
+Goal 2: You have tested some one else's game and constructively feedback to the developers, ideas, improvements, etc. Testing is an important part of Computing.
 
 
 Task: \textbf{Develop in groups of 2-3 people, a paper-based game's instructions that use dice, pens and paper to produce random drawings. It must use the 'Three Tools', dice, pens and paper; BUT how you use them is up to you. Your instructions will be in sentences so the user can understand exactly what you mean. Your group must test another group's game and provide constructive help.} 
@@ -76,8 +82,7 @@ Task: \textbf{Develop in groups of 2-3 people, a paper-based game's instructions
 You have two dice, some pens and paper.
 
 First 20 minutes
-Working in groups of 2-3 people
-Develop your games and produce the instructions
+Working in groups of 2-3 people, develop your games and produce the instructions.
 
 Remaining Time
 Swap your game with another group and each try their game. Pass back constructive feedback to the other group. Some suggestions to possibly ask yourself when testing.
