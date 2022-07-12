@@ -28,6 +28,44 @@ The Big SEcret: Change the weights we can get different functions from the 'neur
 
 \section{Building a Single Neuron}
 
+On a blank sheet in either Excel or equivalent. 
+
+1.  Write following headings 
+A                B                            D                 E                 F                                      H                             J
+X1	X2	 	W0	W1	W2	 	net 	 	Y
+
+2.  Under X1 and X2 write down the four binary combinations - these are your inputs 
+
+3   Under W0 W1 W2 write down three number W0 is the bias , W1 is the weight on input 1 and W2 is the weight on input 2
+
+4 Under net on line 2 write this formula  =A2*$E$2+B2*$F$2+D2 and then copy and paste it into the next three cells below it.
+
+5. Under Y type in the following  =IF(H2>=0,1,0)  and then copy and paste the formula to the three cells below it.
+
+
+Hopefully it look similar to the one below.
+
+X1	X2	 	W0	W1	W2	 	net 	 	Y
+
+0	0	 	-2	1	1	 	-2	 	0
+
+0	1	 	 	 	 	 	-1	 	0
+
+1	0	 	 	 	 	 	-1	 	0
+
+1	1	 	 	 	 	 	0	 	1
+
+
+Questions
+
+1 What logic operation has been carried out above?
+
+2.If W0=1 W1=-1 and W2=-1  what logic operation do we have?
+
+3. If W0=-1 W1=0 and W2=1  in terms of logic operation how else can be described Y in terms of X1 X2
+
+4. Adjust the value of W0 (the bias) and then discuss with a colleague what do you think the main job of the bias is?
+
 \section{Training a single neurone}
 
 \section{Three neurones connect - we have a network}
