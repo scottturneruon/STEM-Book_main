@@ -67,5 +67,28 @@ Questions
 4. Adjust the value of W0 (the bias) and then discuss with a colleague what do you think the main job of the bias is?
 
 \section{Training a single neurone}
+(i) Adapted the spreadsheet so that delta rule is used to train the neuron.
+or
+(ii) write a Python program that sets up a neurone, trains it and then test the neuron.
+This is for those who want more of a challenge in the class
+In both you will need to the following:
+(i) Set X0, X1, X2 up and cycle through each input combination;
+(ii) Set some weights;
+(iii) Calculated net and then get the output of the neuron as before.
+(iv) The error = Desired output - actual output and set the eta/learning coefficient to 0.5
+(v) for each weight workout the change in the weight (delta rule) = (input connected to the weight)*(learning coefficient)*(Error)
+(vi) Add the change in the weights to the old weights to give the new weight
+(vii) For each combination repeat (iii) to (vi)
+(vii) Repeat (vii) until for every input the error =0 
+ Reflection
+and Feedback
+Now try to get your system to find the weights for the following
+X1   X2    Output
+0     0      0
+0     1      1
+1     0      1
+1     1      0
+
+What happened? Why?
 
 \section{Three neurones connect - we have a network}
