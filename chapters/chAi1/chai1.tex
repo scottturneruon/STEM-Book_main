@@ -1,3 +1,6 @@
+\usepackage{booktabs}
+
+
 \chapter{Excel Neuron}
 \section{Introduction}
 Neural Networks, or more accurately artificial neural networks at their core a collection of simulated neurones. We can produce a simple neurone in Excel, that we can then get to learn a pattern and by repeating produce a simple neural network.
@@ -17,7 +20,7 @@ if Weighted Sum >=0 then Y(the output) =1 otherwise Y=0
 
 So in the figure 6.1 example Weighted Sum = -1+X1+X2 (remember X1 and X2 can be 1 or 0). So to get an output (Y) to be 0 both X1 and X2 need to be 0 if one of then is a 1 then the output (y) is a 1. This is an OR gate. If we changed W0 from -1 to -2 then both X1 and X2 need to 1 to get a Y=1 - this is an AND gate.
 
-The Big SEcret: Change the weights we can get different functions from the 'neurone'.
+The Big Secret: Change the weights we can get different functions from the 'neurone'.
 
 \begin{figure}
     \centering
@@ -31,6 +34,7 @@ The Big SEcret: Change the weights we can get different functions from the 'neur
 On a blank sheet in either Excel or equivalent. 
 
 1.  Write following headings 
+
 A                B                            D                 E                 F                                      H                             J
 X1	X2	 	W0	W1	W2	 	net 	 	Y
 
@@ -45,17 +49,15 @@ X1	X2	 	W0	W1	W2	 	net 	 	Y
 
 Hopefully it look similar to the one below.
 
-X1	X2	 	W0	W1	W2	 	net 	 	Y
+\begin{tabular}{lllllll} \hline
+X1 & X2 & W0 & W1 &	W2 & net & Y	 	 \\ \hline
+0  & 0  & -2  & 1  & 1	 & 	-2 & 	0 \\ \hline
+0  & 1	&     &    &     & 	-1 & 	0 \\ \hline  
+1  & 0	&  	  &    & 	  & -1 & 	0 \\ \hline
+1  & 1	& 	  &    &      &   0	 &  	1 \\ \hline
+\end{tabular}
 
-0	0	 	-2	1	1	 	-2	 	0
-
-0	1	 	 	 	 	 	-1	 	0
-
-1	0	 	 	 	 	 	-1	 	0
-
-1	1	 	 	 	 	 	0	 	1
-
-
+\newline
 Questions
 
 1 What logic operation has been carried out above?
@@ -69,26 +71,84 @@ Questions
 \section{Training a single neurone}
 (i) Adapted the spreadsheet so that delta rule is used to train the neuron.
 or
+\newline
 (ii) write a Python program that sets up a neurone, trains it and then test the neuron.
+\newline
 This is for those who want more of a challenge in the class
+\newline
+\newline
 In both you will need to the following:
+\newline
 (i) Set X0, X1, X2 up and cycle through each input combination;
+\newline
 (ii) Set some weights;
+\newline
 (iii) Calculated net and then get the output of the neuron as before.
+\newline
 (iv) The error = Desired output - actual output and set the eta/learning coefficient to 0.5
+\newline
 (v) for each weight workout the change in the weight (delta rule) = (input connected to the weight)*(learning coefficient)*(Error)
+\newline
 (vi) Add the change in the weights to the old weights to give the new weight
+\newline
 (vii) For each combination repeat (iii) to (vi)
+\newline
 (vii) Repeat (vii) until for every input the error =0 
- Reflection
-and Feedback
+\UrlBigBreaks{}
+
+\section{Reflection and Feedback}
 Now try to get your system to find the weights for the following
-X1   X2    Output
-0     0      0
-0     1      1
-1     0      1
-1     1      0
+
+\begin{tabular}{lll} \hline
+X1 & X2 & Output	 	 \\ \hline
+0  & 0  & 0 \\ \hline
+0  & 1	& 1 \\ \hline  
+1  & 0	& 1 \\ \hline
+1  & 1	& 0 \\ \hline
+\end{tabular}
 
 What happened? Why?
 
 \section{Three neurones connect - we have a network}
+Using what you learnt from the previous sections we can build three neurones
+\newline
+First building a neurone in the Spreadsheet to give the following output (output 1)
+\begin{tabular}{lll} \hline
+X1 & X2 & Output1	 	 \\ \hline
+0  & 0  & 0 \\ \hline
+0  & 1	& 0 \\ \hline  
+1  & 0	& 1 \\ \hline
+1  & 1	& 0 \\ \hline
+\end{tabular}
+\newline
+Next building another neurone in the same Spreadsheet to give the following output (output 2)
+\begin{tabular}{lll} \hline
+X1 & X2 & Output2	 	 \\ \hline
+0  & 0  & 0 \\ \hline
+0  & 1	& 1 \\ \hline  
+1  & 0	& 0 \\ \hline
+1  & 1	& 0 \\ \hline
+\end{tabular}
+\newline
+Now create a third neuron that instead of using inputs X1 and X2 uses the outputs output 1 and output 2 as its inputs and produces the following:
+\begin{tabular}{lll} \hline
+output 1 & output 2 & Final Output	 	 \\ \hline
+0  & 0  & 0 \\ \hline
+0  & 1	& 1 \\ \hline  
+1  & 0	& 0 \\ \hline
+1  & 1	& 0 \\ \hline
+\end{tabular}
+When its is built what should happen we have have combined the outputs from the first two neurons as inputs to another neurons. We have a network of neurons or a Neural Network!
+\newline 
+When X1 and X2 varies as below the final Output should work now.
+\begin{tabular}{lll} \hline
+output 1 & out 2 & Final Output	 	 \\ \hline
+0  & 0  & 0 \\ \hline
+0  & 1	& 1 \\ \hline  
+1  & 0	& 1 \\ \hline
+1  & 1	& 0 \\ \hline
+\end{tabular}
+
+
+
+\newline
