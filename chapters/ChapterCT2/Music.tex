@@ -1,0 +1,74 @@
+\chapter{Music}
+\section{Scratch}
+
+
+\section{Sonic Pi}
+
+
+The goal - spooky/moanful Hot-Cross Buns (the only bit of music I know the notes for), just so I can play a bit. So let us start with resources I have found useful, alongside Sonic Pi (https://sonic-pi.net/; a really useful webpage is \url{https://newt.phys.unsw.edu.au/jw/notes.html}  to turn the notes into the MIDI number (60, etc) 
+
+So by the end of the last post I got to adding a techno effect on top of the tune:
+\begin{lstlisting}
+use_synth :prophet
+with_fx :ixi_techno do
+  2.times do
+    play chord(:b4, :minor7)
+    sleep 0.5
+    play chord(:a4, :minor7)
+    sleep 0.5
+    play chord(:g4, :minor7)
+    sleep 0.5
+  end
+  4.times do
+    play chord(:g4, :minor7)
+    sleep 0.25
+  end
+  4.times do
+    play chord(:a4, :minor7)
+    sleep 0.25
+  end
+  play chord(:b4, :minor7)
+  sleep 0.5
+  play chord(:a4, :minor7)
+  sleep 0.5
+  play chord(:g4, :minor7)
+  sleep 0.5
+end
+\end{lstlisting}
+
+
+Sonic Pi is a cool system I found out you get it to pan the sounds from left to right and played with that but didn't include it in the end. What I did change in was a different synth but also samples, after trail-and-error, chose the ambi_dark_whoosh (had to with that name)
+\begin{lstlisting}
+use_synth :tech_saws
+sample :ambi_dark_woosh, amp: 0.25
+with_fx :ixi_techno do
+  2.times do
+    play chord(:b3, :minor7)
+    sleep 0.5
+    play chord(:a3, :minor7)
+    sleep 0.5
+    play chord(:g3, :minor7)
+    sleep 0.5
+  end
+  sample :ambi_dark_woosh, amp: 0.25
+  4.times do
+    play chord(:g3, :minor7)
+    sleep 0.25
+  end
+  4.times do
+    play chord(:a3, :minor7)
+    sleep 0.25
+  end
+  sample :ambi_dark_woosh, amp: 0.25
+  play chord(:b3, :minor7)
+  sleep 0.5
+  play chord(:a3, :minor7)
+  sleep 0.5
+  play chord(:g3, :minor7)
+  sleep 0.5
+end
+\end{lstlisting}
+
+
+
+This is a bit of software (and support on Patreon) it is just fun and free. I have no musical ability but I enjoy creating with it.
