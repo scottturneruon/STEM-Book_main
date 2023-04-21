@@ -2,27 +2,39 @@
 \section{Introduction}
 \section{Single neurone in tinkerCad}
 The free online CAD (and so much more) package Tinkercad \url{https://www.tinkercad.com/} under circuits; now has microbits as part of the list of basic components available to build circuits out of.
-
-To have a quick play I wonder if using the built in Scratch=like code blocks, I could build a simulation of neuron on the microbit.
+\begin{figure}
+    \centering
+    \includegraphics[width=11cm]{chapters/chAi1/figures/Tinkercadann1.png}
+    \caption{TinkerCad Microbit Network}
+    \label{fig:tinkercad_neural_microbit_network}
+\end{figure}
+To have a quick play I wonder if using the built in Scratch-like code blocks, I could build a simulation of neuron on the microbit.
 
 Requirements 
 - By altering the bias, weights change the behaviour of buttons A and B
 -when A is pressed a variable input1 is set to 1 and when released it goes to 0. The same happens for Button B and a variable input 2
 - if (bias+weight1*input1+weight2*input2)>=0 then a T for True appears of the LEDs otherwise F for False is shown.
-
+\begin{figure}
+    \centering
+    \includegraphics[width=11cm]{chapters/chAi1/figures/Tinkercadann2.png}
+    \caption{TinkerCad Microbit Network: setting up}
+    \label{fig:tinkercad_neural_microbit_network_basic}
+\end{figure}
 That is it really, apart initialising the variables. The code for producing an OR is shown below and the GIF at the end shows an AND in action:
+\begin{figure}
+    \centering
+    \includegraphics[width=11cm]{chapters/chAi1/figures/Tinkercadann23.png}
+    \caption{TinkerCad Microbit Network: basic unit}
+    \label{fig:tinkercad_neural_microbit_network_basic2}
+\end{figure}
+The so in action for an AND (bias is set to -2); change the bias to -1 and you would get an OR.
 
-
-
-
-
-
-
-
-The GIF below shows it action for an AND (bias is set to -2); change the bias to -1 and you would get an OR.
-
-
-
+\begin{figure}
+    \centering
+    \includegraphics[width=11cm]{chapters/chAi1/figures/Tinkercadann4.png}
+    \caption{TinkerCad Microbit Network: }
+    \label{fig:tinkercad_neural_microbit_network_basic3}
+\end{figure}
 
 The whole thing is available at: \url{https://www.tinkercad.com/things/8Ph6UBFdICz-brave-duup }
 
