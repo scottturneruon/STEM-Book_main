@@ -94,5 +94,84 @@ Collecting data is great, but we are taking it one step further logging the data
 \subsection{Activity} 
 -	how can this be more meaningful?
 -	How do we do this with so a microbit can see data – some more remote monitoring (see \url{https://microbit.org/projects/make-it-code-it/makecode-wireless-data-logger/} )
--	How could you do this in Python
+-	How could you do this in Python?
+
+\section{Remote sensing}
+
+In the previous activity a single microbit was used to log data. The main problem with this is often we want to sense things that are away from the computer ie remotely (though only a short distance away). The previous solution was attached to the computer to work. So one solution (and closer to solutions used in the 'real-world' is to separate the sensing part and receiving and processing into two different devices. So in this case two micro bits; one collecting and sending data, and the other receiving and transferring the data to the computer.
+
+\subsection{Getting started}
+
+So to play with this, we are going to extend our previous solution to be a remote monitoring system; and the easiest way to get started is with a solution that already exists and adapt it. So we going to use the solution found in \url{https://microbit.org/projects/make-it-code-it/makecode-wireless-data-logger/} as our starting point (I would suggest literally use the makecode provided and then adapt it)
+
+ 
+
+Advice: To avoid confusion when programming the microbits; as well as using separate makecode I would suggest programming them separately and only have one microbit at a time plugged in to the computer, to avoid confusion.
+
+ 
+\subsection{Microbit 1: Transmitter and sensors}
+For those that don’t know; microbit can send bits of data over short distances to and from microbits, details on how can be found at https://makecode.microbit.org/reference/radio. For this application we create a 'group' really just give the group a number, and then send our sensor values by radio.
+
+We are going to keep sending the values, light and temperature, but not connect it to the computer directly (after programming) so the microbit in use will need a battery to power it but can be moved away from the computer - it's remote!
+
+ 
+
+Here is the code:
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{chapters/ChapterP2-datalog/figures/datalog10.png}
+    \caption{Transmitter code}
+    \label{fig:datalogtransmitter}
+\end{figure}
+
+
+
+
+
+ 
+
+ 
+
+Microbit 2: Reciever
+
+This is the one we keep connected to the computer.
+
+What we need to do is the following
+
+-            Use the same radio group number as the transmitter
+
+-            -Receive the radio signal and based on the name received (in this case x or y) allocated the value sent with the name to a variable.
+
+-            -finally write the values to the screen (just as we did with the single microbit solution) and display them.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{chapters/ChapterP2-datalog/figures/datalog11.png}
+    \caption{Reciever code}
+    \label{fig:datalogreciever}
+\end{figure}
+ 
+\subsection{Summary}
+
+Essentially we have split what we did in the first activity across two microbits connected by a radio link. Running the "Show data" button on the receiver MakeCode window; as before you should get something like this.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{chapters/ChapterP2-datalog/figures/datalog12.png}
+    \caption{Remote Data Logging}
+    \label{fig:datalogremotedatalogging}
+\end{figure}
+Unless temperature is changing fairly quickly you might not see a great deal of change but hold the transmitter in your hand and you will see some changes. The light level can be made to change also be moving the transmitter so the LED array is pointed at bright screen
+
+ 
+
+To save the data as a CSV file and view later in an spreadsheet; as before just use the blue download icon.
+
+\subsection{Some suggestions for improvement}
+
+-            When the two microbits are running without the graphs by just looking at the microbit, especially the transmitter, it is not clear that it is doing anything. So could something we added to fix this?
+
+-            Play around with the sampling rate (ie. how often do you send data). So in the transmitter do what we did in the our single microbit solution, replace the forever loop with one that send data every so often.
+
+Have fun.
 
